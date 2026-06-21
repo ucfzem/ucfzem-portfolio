@@ -7,12 +7,19 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    font-size: clamp(14px, 1vw + 0.5rem, 20px);
   }
   body {
     @apply bg-brown-darker text-cream font-inter;
+    min-height: 100dvh;
   }
   ::selection {
     @apply bg-gold/30 text-cream;
+  }
+  *:focus-visible {
+    outline: 2px solid #c89b3c;
+    outline-offset: 3px;
+    border-radius: 4px;
   }
 }
 
@@ -26,13 +33,47 @@
   .card-hover {
     @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-gold/10;
   }
+  .card-hover:focus-visible {
+    @apply -translate-y-1 shadow-lg shadow-gold/20;
+  }
   .gold-border {
     @apply border border-gold/20;
+  }
+  .tv-pad {
+    @apply p-4 md:p-6 lg:p-8;
+  }
+  .tv-text {
+    @apply text-sm sm:text-base md:text-lg lg:text-xl;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 sm:px-8 py-3 sm:py-4 bg-gold text-brown-darker font-semibold rounded-full
+           hover:bg-gold-light focus-visible:bg-gold-light
+           transition-all duration-300 shadow-lg shadow-gold/20
+           text-sm sm:text-base lg:text-lg
+           min-h-[44px] min-w-[44px];
+  }
+  .btn-outline {
+    @apply px-6 sm:px-8 py-3 sm:py-4 gold-border rounded-full font-medium text-cream/80
+           hover:border-gold/50 hover:text-cream focus-visible:border-gold/50 focus-visible:text-cream
+           transition-all duration-300 text-sm sm:text-base lg:text-lg
+           min-h-[44px] min-w-[44px];
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: clamp(6px, 1vw, 12px);
 }
 ::-webkit-scrollbar-track {
   @apply bg-brown-darker;
@@ -42,4 +83,14 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-gold/50;
+}
+
+@media (min-width: 1920px) {
+  html { font-size: 18px; }
+}
+@media (min-width: 2560px) {
+  html { font-size: 20px; }
+}
+@media (min-width: 3840px) {
+  html { font-size: 24px; }
 }
