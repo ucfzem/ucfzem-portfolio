@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-brown-darker text-cream font-inter;
+  }
+  ::selection {
+    @apply bg-gold/30 text-cream;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-gold via-yellow-300 to-gold-light;
+  }
+  .glass {
+    @apply bg-brown-deep/60 backdrop-blur-md border border-gold/10;
+  }
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-gold/10;
+  }
+  .gold-border {
+    @apply border border-gold/20;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-brown-darker;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gold/30 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gold/50;
+}
