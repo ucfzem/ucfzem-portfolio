@@ -3,12 +3,12 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const projects = [
-  { title: 'Nass El Ghiwane — Paroles & Citations', category: 'Dev', desc: 'Extraction de 129 pages PDF en 69 sections avec snap-scroll RTL pour le groupe mythique.', tags: ['HTML/CSS', 'PDF', 'RTL', 'Scroll Snap'], color: 'from-gold/20 to-transparent', href: 'https://ucfzem.github.io/NassElGhiwane/', img: 'https://placehold.co/600x400/1a1410/c89b3c?text=Nass+El+Ghiwane&font=playfair-display' },
   { title: 'Élixir — Site e-commerce de luxe', category: 'Dev', desc: 'Conception d’une expérience immersive avec Next.js, Framer Motion, et une charte dorée.', tags: ['Next.js', 'Framer Motion', 'UI'], color: 'from-gold/20 to-transparent', href: '#', img: 'https://placehold.co/600x400/2c2218/c89b3c?text=Élixir&font=playfair-display' },
   { title: 'Outil de génération de palettes', category: 'Dev', desc: 'Application React générant des palettes harmonieuses à partir d’une image.', tags: ['React', 'Canvas', 'UI'], color: 'from-gold/20 to-transparent', href: '#', img: 'https://placehold.co/600x400/2c2218/c89b3c?text=Palettes&font=playfair-display' },
   { title: 'Affiche Typographique "Mouvement"', category: 'Design', desc: 'Série d’affiches animées explorant la déconstruction typographique.', tags: ['Typography', 'Motion', 'Print'], color: 'from-gold/20 to-transparent', href: '#', img: 'https://placehold.co/600x400/2c2218/c89b3c?text=Mouvement&font=playfair-display' },
   { title: 'Identité de marque — Artisan&Co', category: 'Branding', desc: 'Création d’une identité visuelle complète pour une marque artisanale de luxe.', tags: ['Branding', 'Typography', 'Packaging'], color: 'from-gold/20 to-transparent', href: '#', img: 'https://placehold.co/600x400/2c2218/c89b3c?text=Artisan&font=playfair-display' },
   { title: 'Dashboard analytique interactif', category: 'Dev', desc: 'Visualisation de données en temps réel avec React et D3.js.', tags: ['React', 'D3.js', 'Data Viz'], color: 'from-gold/20 to-transparent', href: '#', img: 'https://placehold.co/600x400/2c2218/c89b3c?text=Dashboard&font=playfair-display' },
+  { title: 'Campagne print — "Matières Premières"', category: 'Design', desc: 'Direction artistique et production visuelle pour une campagne éditoriale.', tags: ['Print', 'Photography', 'Layout'], color: 'from-gold/20 to-transparent', href: '#', img: 'https://placehold.co/600x400/2c2218/c89b3c?text=Matières&font=playfair-display' },
 ]
 
 const filters = ['Tous', 'Dev', 'Design', 'Branding']

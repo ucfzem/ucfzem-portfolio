@@ -4,14 +4,6 @@ import Link from 'next/link'
 
 const projects = [
   {
-    title: 'Nass El Ghiwane — Paroles & Citations',
-    category: 'Dev · UI · RTL',
-    desc: 'Site full-screen dédié aux paroles du groupe mythique Nass El Ghiwane. Extraction de 129 pages PDF en 69 sections avec snap-scroll, RTL arabe.',
-    tags: ['HTML/CSS', 'PDF Parsing', 'RTL', 'Scroll Snap'],
-    href: 'https://ucfzem.github.io/NassElGhiwane/',
-    img: 'https://placehold.co/600x400/1a1410/c89b3c?text=Nass+El+Ghiwane&font=playfair-display',
-  },
-  {
     title: 'Élixir — Site e-commerce de luxe',
     category: 'Dev · UI',
     desc: 'Conception d’une expérience immersive avec Next.js, Framer Motion, et une charte dorée.',
@@ -26,6 +18,14 @@ const projects = [
     tags: ['React', 'Canvas API', 'UI'],
     href: '#',
     img: 'https://placehold.co/600x400/2c2218/c89b3c?text=Palettes&font=playfair-display',
+  },
+  {
+    title: 'Dashboard analytique interactif',
+    category: 'Dev',
+    desc: 'Visualisation de données en temps réel avec React et D3.js.',
+    tags: ['React', 'D3.js', 'Data Viz'],
+    href: '#',
+    img: 'https://placehold.co/600x400/2c2218/c89b3c?text=Dashboard&font=playfair-display',
   },
 ]
 
