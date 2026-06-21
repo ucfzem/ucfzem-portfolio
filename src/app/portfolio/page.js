@@ -88,6 +88,7 @@ export default function PortfolioPage() {
                   </div>
                 </div>
               </a>
+            </motion.div>
             ))}
           </AnimatePresence>
         </motion.div>
